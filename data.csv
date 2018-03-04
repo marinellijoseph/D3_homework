@@ -1,0 +1,59 @@
+﻿id,state,abbr,income,depression
+1,Alabama,AL,1841217,21.3
+2,Alaska,AK,249659,15.6
+3,Arizona,AZ,2428743,18.7
+4,Arkansas,AR,1131288,21.5
+5,California,CA,12758648,13.3
+6,Colorado,CO,2039592,17
+7,Connecticut,CT,1355817,18.3
+8,Delaware,DE,349743,18.3
+9,District of Columbia,DC,277378,18.1
+10,Florida,FL,7328046,16.2
+11,Georgia,GA,3587521,18.3
+12,Hawaii,HI,450769,10.7
+13,Idaho,ID,591587,19.5
+14,Illinois,IL,4772421,16.7
+15,Indiana,IN,2502739,20.7
+16,Iowa,IA,1241471,18.7
+17,Kansas,KS,1109280,18.6
+18,Kentucky,KY,1712094,23.9
+19,Louisiana,LA,1718194,18.7
+20,Maine,ME,549841,23.7
+21,Maryland,MD,2165438,15.9
+22,Massachusetts,MA,2549336,21.7
+23,Michigan,MI,3834574,20.5
+24,Minnesota,MN,2129195,18.2
+25,Mississippi,MS,1095823,19.9
+26,Missouri,MO,2354809,21.7
+27,Montana,MT,410962,20.4
+28,Nebraska,NE,740765,17.7
+29,Nevada,NV,1021519,15.6
+30,New Hampshire,NH,519756,21
+31,New Jersey,NJ,3194844,13.4
+32,New Mexico,NM,760916,21.1
+33,New York,NY,7282398,15.9
+34,North Carolina,NC,3790620,19
+35,North Dakota,ND,305431,17.3
+36,Ohio,OH,4593172,20.9
+37,Oklahoma,OK,1459759,21.8
+38,Oregon,OR,1535511,24
+39,Pennsylvania,PA,4945972,19.7
+40,Rhode Island,RI,409654,20.6
+41,South Carolina,SC,1826914,19.9
+42,South Dakota,SD,334475,16.6
+43,Tennessee,TN,2509665,21.4
+44,Texas,TX,9277197,14.6
+45,Utah,UT,918370,20.7
+46,Vermont,VT,257229,21.8
+47,Virginia,VA,3083820,17.4
+48,Washington,WA,2679601,21.6
+49,West Virginia,WV,735375,23.6
+50,Wisconsin,WI,2307685,17
+51,Wyoming,WY,232594,19
+,,,1233490,8.7
+,,,,18.5
+,,,,19
+,,,,18.7
+,,,,
+,,,,
+58,,,,
