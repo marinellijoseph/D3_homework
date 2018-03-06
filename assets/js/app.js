@@ -5,7 +5,7 @@
 // Follow your written instructions and create a scatter plot with D3.js.
 
 // SVG area dimensions
-var svgWidth = 960;
+var svgWidth = 1000;
 var svgHeight = 500;
 
 // define chart's margins as an object
@@ -34,7 +34,7 @@ var svg = d3
 var parseTime = d3.timeParse("%Y");
 
 // Load data from data.csv
-d3.csv("data.csv", function(error, demographicsData) {
+d3.csv("Data/data.csv", function(error, demographicsData) {
 
     // throw an error if one occurs
     if (error) throw error;
@@ -42,7 +42,7 @@ d3.csv("data.csv", function(error, demographicsData) {
     // print data
     console.log(demographicsData);
 
-    // formate the data
+    // format the data 
     demographicsData.forEach(function(data) {
         data.income = +data.income;
         data.depression = +data.depression;
@@ -67,22 +67,51 @@ d3.csv("data.csv", function(error, demographicsData) {
     var bottomAxis = d3.axisBottom(xLinearScale);
     var leftAxis = d3.axisLeft(yLinearScale);
 
-    // configure a line function plotting ccoordinates using scales
-    var drawLine = d3
-        .line()
-        .x(function(data) {
-            return xLinearScale(data.income);
+    // // configure a line function plotting ccoordinates using scales
+    // var drawLine = d3
+    //     .line()
+    //     .x(function(data) {
+    //         return xLinearScale(data.income);
+    //     })
+    //     .y(function(data) {
+    //         return yLinearScale(data.depression);
+    //     });
+
+// // append svg path and plot using line function
+// svg
+//         .append("path")
+
+//         .attr("d", drawLine(demographicsData))
+//         .attr("class", "line");
+
+var gdots = svg.selectAll("g.dot")
+        .data(data)
+        .enter().append('g');
+
+gdots.append("circle")
+        .attr("class", "dot")
+        .attr("r", function (d) {
+            return d.r;
         })
-        .y(function(data) {
-            return yLinearScale(data.depression);
+        .attr("cx", function (d) {
+            return x(d.income);
+        })
+        .attr("cy", function (d) {
+            return d.depression;
+        })
+        .style("fill", function (d) {
+            return d.c;
         });
 
-// append svg path and plot using line function
-svg
-        .append("path")
-
-        .attr("d", drawLine(demographicsData))
-        .attr("class", "line");
+gdots.append("text").text(function (d) {
+    return d.abbr;
+})
+    .attr("x", function (d) {
+        return x(d.income);
+    })
+    .attr("y", function (d) {
+        return y(d.depression);
+    });
 
 // append svg group element to svg area, create left axis inside of it
 svg.append("g")
@@ -91,11 +120,14 @@ svg.append("g")
 
 // append svg group element to svg area, create bottom axis inside of it
 // translate bottom axis to bottom of page
-avg.append("g")
+svg.append("g")
         .attr("class", "axis")
         .attr("transform", "translate(0, " + chartHeight + ")")
         .call(bottomAxis);
 });
+
+// var iframe = document.getElementById('iframeId');
+// var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
 
 // // stack example
 // var gdots = svg.selectAll("g.dot")
