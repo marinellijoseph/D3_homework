@@ -125,36 +125,3 @@ svg.append("g")
         .attr("transform", "translate(0, " + chartHeight + ")")
         .call(bottomAxis);
 });
-
-// var iframe = document.getElementById('iframeId');
-// var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-
-// // stack example
-// var gdots = svg.selectAll("g.dot")
-//     .data(data)
-//     .enter().append('g');
-
-// gdots.append("circle")
-//     .attr("class", "dot")
-//     .attr("r", function (d) {
-//         return d.r;
-//     })
-//     .attr("cx", function (d) {
-//         return x(d.x);
-//     })
-//     .attr("cy", function (d) {
-//         return y(d.y);
-//     })
-//     .style("fill", function (d) {
-//         return d.c;
-//     });
-
-// gdots.append("text").text(function (d) {
-//     return d.name;
-// })
-//     .attr("x", function (d) {
-//         return x(d.x);
-//     })
-//     .attr("y", function (d) {
-//         return y(d.y);
-//     });
